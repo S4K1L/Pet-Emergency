@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "447127179929",
+    "project_id": "pet-emergency-567b9",
+    "storage_bucket": "pet-emergency-567b9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447127179929:android:9d0ba0baa6a32fab22de08",
+        "android_client_info": {
+          "package_name": "com.example.petemergency"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABNgObxJFLKxs7jK2lDzz__5Iw4N5DJ0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
