@@ -9,8 +9,9 @@ import '../controller/education_and_quiz_controller.dart';
 class EducationAndQuizScreen extends StatelessWidget {
   final EducationAndQuizController controller =
   Get.put(EducationAndQuizController());
+  final bool backOn;
 
-  EducationAndQuizScreen({super.key});
+  EducationAndQuizScreen({super.key, required this.backOn});
 
   @override
   Widget build(BuildContext context) {
@@ -19,17 +20,15 @@ class EducationAndQuizScreen extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(56),
         child: AppBar(
+          leading: backOn ? IconButton(
+            icon: Icon(Icons.arrow_back_ios, color: kPrimaryColor),
+            onPressed: () => Get.back(),
+          ) : null,
           automaticallyImplyLeading: false,
-          backgroundColor: Color(0xFFBFD5E4),
+          backgroundColor: kTopBackGroundColor,
           elevation: 0,
-          title: Row(
-            children: [
-              IconButton(
-                icon: Icon(Icons.arrow_back_ios, color: kPrimaryColor),
-                onPressed: () => Navigator.pop(context),
-              ),
-            ],
-          ),
+          title: Text('Education & Quiz',style: TextStyle(color: kPrimaryColor,fontWeight: FontWeight.w600),),
+          centerTitle: true,
         ),
       ),
       body: Obx(() {

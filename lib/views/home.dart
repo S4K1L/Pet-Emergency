@@ -7,6 +7,7 @@ import 'package:petemergency/views/education_and_quiz.dart';
 import '../utils/widgets/menu_card.dart';
 import 'clicnic_communication_screen.dart';
 import 'emergency_protocols.dart';
+import 'feed_back.dart';
 import 'triage_tool_screen.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: kBackGroundColor, // Light background color
       appBar: AppBar(
         backgroundColor: kTopBackGroundColor, // Blue top bar
-        title: Text('Triage Tool',style: TextStyle(fontWeight: FontWeight.w600,color: kPrimaryColor,fontSize: 22.sp),),
+        title: Text('Pet Emergency',style: TextStyle(fontWeight: FontWeight.w600,color: kPrimaryColor,fontSize: 22.sp),),
         centerTitle: true,
         elevation: 0,
       ),
@@ -35,7 +36,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   MenuCard(
                     onPress: () {
-                      Get.to(()=> TriageToolScreen(),transition: Transition.rightToLeft);
+                      Get.to(()=> TriageToolScreen(backOn: true,),transition: Transition.rightToLeft);
                     },
                     icon: Icons.medical_services,
                     title: 'Triage\nTool',
@@ -49,7 +50,7 @@ class HomePage extends StatelessWidget {
                   ),
                   MenuCard(
                     onPress: () {
-                      Get.to(()=> EducationAndQuizScreen(),transition: Transition.rightToLeft);
+                      Get.to(()=> EducationAndQuizScreen(backOn: true),transition: Transition.rightToLeft);
                     },
                     icon: Icons.school,
                     title: 'Education\n& Quiz',
@@ -66,7 +67,9 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             VerticalMenuCard(
-              onPress: () {},
+              onPress: () {
+                Get.to(()=> FeedbackScreen(backOn: true),transition: Transition.rightToLeft);
+              },
               icon: Icons.textsms_rounded,
               title: 'Feedback',
               isFullWidth: true,

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:petemergency/views/education_and_quiz.dart';
+import 'package:petemergency/views/feed_back.dart';
 import '../../views/profile_screen.dart';
+import '../../views/triage_tool_screen.dart';
 import '../theme/colors.dart';
 import '../../views/home.dart';
 
@@ -15,8 +18,9 @@ class _BottomBarState extends State<UserCustomBottomBar> {
   int indexColor = 0;
   final List<Widget> screens = [
     HomePage(),
-    HomePage(),
-    HomePage(),
+    TriageToolScreen(backOn: false),
+    EducationAndQuizScreen(backOn: false),
+    FeedbackScreen(backOn: false),
     ProfileScreen(),
   ];
 
@@ -35,8 +39,9 @@ class _BottomBarState extends State<UserCustomBottomBar> {
           children: [
             _buildBottomNavigationItem(Icons.home, 0),
             _buildBottomNavigationItem(Icons.menu_book, 1),
-            _buildBottomNavigationItem(Icons.person, 2),
-            _buildBottomNavigationItem(Icons.menu, 3),
+            _buildBottomNavigationItem(Icons.school, 2),
+            _buildBottomNavigationItem(Icons.textsms_rounded, 3),
+            _buildBottomNavigationItem(Icons.menu, 4),
           ],
         ),
       ),

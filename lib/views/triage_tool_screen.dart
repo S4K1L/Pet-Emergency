@@ -7,6 +7,9 @@ import '../controller/triage_controller.dart';
 
 class TriageToolScreen extends StatelessWidget {
   final TriageController controller = Get.put(TriageController());
+  final bool backOn;
+
+  TriageToolScreen({super.key, required this.backOn,});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,7 @@ class TriageToolScreen extends StatelessWidget {
         backgroundColor: kTopBackGroundColor,
         title: Text('Triage Tool',style: TextStyle(color: kPrimaryColor,fontWeight: FontWeight.w600),),
         centerTitle: true,
-        leading: IconButton(
+        leading: backOn ? IconButton(
           icon: Icon(Icons.arrow_back_ios,color: kPrimaryColor,),
           onPressed: () {
             if (controller.currentStep.value == TriageStep.species) {
@@ -25,7 +28,8 @@ class TriageToolScreen extends StatelessWidget {
               controller.restartTriage();
             }
           },
-        ),
+        ) : null,
+        automaticallyImplyLeading: false,
       ),
       body: Obx(() {
         switch (controller.currentStep.value) {
