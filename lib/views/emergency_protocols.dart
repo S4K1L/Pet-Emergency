@@ -9,8 +9,6 @@ class EmergencyProtocolsScreen extends StatelessWidget {
 
   final List<String> protocols = [
     "CPR (RECOVER)",
-    "Shock management",
-    "Hemorrhage",
     "Heat stroke",
     "Seizures",
     "GDV",

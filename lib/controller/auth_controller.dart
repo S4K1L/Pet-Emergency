@@ -106,6 +106,7 @@ class AuthController extends GetxController {
     user.value = null;
   }
 
+
   Future<void> updateProfile({String? displayName, String? phoneNumber}) async {
     try {
       if (_auth.currentUser == null) return;
@@ -145,4 +146,6 @@ class AuthController extends GetxController {
         return 'An error occurred. Please try again';
     }
   }
+
+
 }

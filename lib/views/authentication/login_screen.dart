@@ -82,20 +82,20 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               )),
-              SizedBox(height: 8.h),
-              Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: () {
-                    // Add forgot password functionality
-                  },
-                  child: Text(
-                    'Forgot Password?',
-                    style: TextStyle(color: kPrimaryColor),
-                  ),
-                ),
-              ),
-              SizedBox(height: 16.h),
+              // SizedBox(height: 8.h),
+              // Align(
+              //   alignment: Alignment.centerRight,
+              //   child: TextButton(
+              //     onPressed: () {
+              //       // Add forgot password functionality
+              //     },
+              //     child: Text(
+              //       'Forgot Password?',
+              //       style: TextStyle(color: kPrimaryColor),
+              //     ),
+              //   ),
+              // ),
+              SizedBox(height: 26.h),
 
               // Login Button
               Obx(() => SizedBox(

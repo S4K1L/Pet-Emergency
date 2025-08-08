@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:petemergency/utils/constant/const.dart';
 import 'package:petemergency/utils/theme/colors.dart';
 import '../controller/feedback_controller.dart';
 
@@ -60,7 +61,7 @@ class FeedbackScreen extends StatelessWidget {
                     icon: Icons.description,
                     title: 'Complete Survey',
                     subtitle: 'Open a detailed Google Form survey',
-                    onTap: controller.openGoogleForm,
+                    onTap: ()=> controller.openGoogleForm(WebsiteUrl.googleFormUrl),
                   ),
                   SizedBox(height: 20.h),
 

@@ -6,13 +6,11 @@ import 'package:open_file/open_file.dart';
 
 class ProtocolController extends GetxController {
   final Map<String, String> _protocolFiles = {
-    "CPR (RECOVER)": "assets/protocols/cpr.pdf",
-    "Shock management": "assets/protocols/shock.pdf",
-    "Hemorrhage": "assets/protocols/hemorrhage.pdf",
-    "Heat stroke": "assets/protocols/heat_stroke.pdf",
-    "Seizures": "assets/protocols/seizures.pdf",
-    "GDV": "assets/protocols/gdv.pdf",
-    "Crash cart checklist": "assets/protocols/crash_cart.pdf",
+    "CPR (RECOVER)": "assets/cpr.pdf",
+    "Heat stroke": "assets/heat_stroke.pdf",
+    "Seizures": "assets/seizures.pdf",
+    "GDV": "assets/gdv.pdf",
+    "Crash cart checklist": "assets/crash_cart.pdf",
   };
 
   Future<void> openProtocol(String protocolName) async {

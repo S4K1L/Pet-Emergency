@@ -72,12 +72,16 @@ class FeedbackController extends GetxController {
     }
   }
 
-  Future<void> openGoogleForm() async {
-    const googleFormUrl = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform';
-    if (await canLaunch(googleFormUrl)) {
-      await launch(googleFormUrl);
-    } else {
-      Get.snackbar('Error', 'Could not open the feedback form');
+
+  Future<void> openGoogleForm(String url) async {
+    if (!url.startsWith('http')) {
+      url = 'https://$url';
+    }
+    final Uri uri = Uri.parse(url);
+    try {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    } catch (e) {
+      Get.snackbar('Error', 'Could not open website');
     }
   }
 }
